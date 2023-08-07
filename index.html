@@ -1,0 +1,3565 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      zkSync — Accelerating the mass adoption of crypto for personal
+      sovereignty.
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="images/social-share.png" />
+    <meta property="og:image:secure_url" content="images/social-share.png" />
+    <meta
+      name="twitter:image"
+      content="https://zksync.io/img/social-share.png"
+    />
+    <link rel="stylesheet" href="./css/entry.f4f4319c.css">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="msapplication-TileColor" content="#11142b" />
+    <meta name="msapplication-config" content="/icons/browserconfig.xml" />
+    <meta name="theme-color" content="#11142B" />
+    <meta
+      name="keywords"
+      content="zkSync, Matter Labs, rollup, ZK rollup, zero confirmation, ZKP, zero-knowledge proofs, Ethereum, crypto, blockchain, permissionless, L2, secure payments, scalable"
+    />
+    <meta
+      name="description"
+      content="zkSync is a ZK rollup that represents the end-game for scaling Ethereum - one that scales its technology and values without degrading security or decentralization."
+    />
+    <meta name="author" content="https://matter-labs.io" />
+    <meta
+      name="twitter:title"
+      content="zkSync — Accelerating the mass adoption of crypto for personal sovereignty."
+    />
+    <meta
+      name="twitter:description"
+      content="zkSync is a ZK rollup that represents the end-game for scaling Ethereum - one that scales its technology and values without degrading security or decentralization."
+    />
+    <meta name="twitter:site" content="@zksync" />
+    <meta name="twitter:creator" content="@the_matter_labs" />
+    <meta
+      name="twitter:image:alt"
+      content="zkSync — Accelerating the mass adoption of crypto for personal sovereignty."
+    />
+    <meta
+      property="og:title"
+      content="zkSync — Accelerating the mass adoption of crypto for personal sovereignty."
+    />
+    <meta
+      property="og:description"
+      content="zkSync is a ZK rollup that represents the end-game for scaling Ethereum - one that scales its technology and values without degrading security or decentralization."
+    />
+    <meta
+      property="og:image:alt"
+      content="zkSync — Accelerating the mass adoption of crypto for personal sovereignty."
+    />
+    <meta
+      name="google-site-verification"
+      content="WECSMwjGdH_0qY2ihONg3RF48XbuHfM-0JaL0yeCjAA"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <style>
+      body,
+      html {
+        --tw-bg-opacity: 1;
+        background-color: rgb(17 20 43 / var(--tw-bg-opacity));
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+          BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+          sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+          Noto Color Emoji;
+        height: 100%;
+        letter-spacing: -0.015em;
+        width: 100%;
+      }
+      a,
+      body,
+      html {
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      a,
+      a:hover,
+      body,
+      html {
+        --tw-text-opacity: 1;
+      }
+      a:hover {
+        color: rgb(140 141 252 / var(--tw-text-opacity));
+      }
+      a:focus-visible {
+        --tw-text-opacity: 1;
+        color: rgb(140 141 252 / var(--tw-text-opacity));
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      a:active {
+        --tw-text-opacity: 1;
+        color: rgb(78 82 154 / var(--tw-text-opacity));
+      }
+      b {
+        font-weight: 700;
+      }
+      .bg-video {
+        display: none;
+        height: 730px;
+        -o-object-fit: fill;
+        object-fit: fill;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+      }
+      @media (min-width: 640px) {
+        .bg-video {
+          display: block;
+        }
+      }
+      .app-container {
+        background-image: url(images/hero-bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      @media (min-width: 640px) {
+        .app-container {
+          background-image: none;
+        }
+      }
+    </style>
+    <style>
+      .navbar {
+        height: 72px;
+      }
+      .navbar .popover-container {
+        height: 100%;
+      }
+      .navbar .panel-container-desktop {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 64rem;
+        position: relative;
+        z-index: 20;
+      }
+      .navbar .panel-container-desktop .logo-container {
+        font-weight: 600;
+        margin-left: 1.25rem;
+      }
+      .navbar .panel-container-desktop .navigation-container {
+        display: none;
+      }
+      @media (min-width: 1024px) {
+        .navbar .panel-container-desktop .navigation-container {
+          display: block;
+        }
+      }
+      .navbar .panel-container-desktop .navigation-container .popover-group {
+        -moz-column-gap: 2rem;
+        column-gap: 2rem;
+        display: flex;
+      }
+      .navbar .panel-container-desktop .right-side-menu {
+        display: none;
+        margin-right: 1.25rem;
+      }
+      @media (min-width: 1024px) {
+        .navbar .panel-container-desktop .right-side-menu {
+          display: block;
+        }
+      }
+      .navbar .panel-container-desktop .popover-button {
+        padding: 1rem;
+        z-index: 10;
+      }
+      .navbar .panel-container-desktop .popover-button:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      .navbar .panel-container-desktop .popover-button:focus-visible {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      @media (min-width: 1024px) {
+        .navbar .panel-container-desktop .popover-button {
+          display: none;
+        }
+      }
+      .navbar .panel-container-desktop .popover-button .menu-icon {
+        width: 1.5rem;
+      }
+      .navbar .panel-container-desktop .popover-button .menu-icon:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      .navbar .panel-container-mobile {
+        --tw-bg-opacity: 1;
+        background-color: rgb(17 20 43 / var(--tw-bg-opacity));
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        position: absolute;
+        width: 100%;
+        z-index: 20;
+      }
+      @media (min-width: 1024px) {
+        .navbar .panel-container-mobile {
+          display: none;
+        }
+      }
+      .navbar .panel-container-mobile .menu-label {
+        padding-bottom: 0.5rem;
+        padding-top: 2rem;
+      }
+      .navbar .panel-container-mobile .menu-label:first-child {
+        padding-top: 0;
+      }
+      .navbar .panel-container-mobile .menu-section-container {
+        --tw-border-opacity: 1;
+        border-bottom-width: 1px;
+        border-color: rgb(41 43 67 / var(--tw-border-opacity));
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+      }
+      @media (min-width: 480px) {
+        .navbar .panel-container-mobile .menu-section-container {
+          justify-content: flex-start;
+        }
+      }
+      @media (min-width: 640px) {
+        .navbar .panel-container-mobile .menu-section-container {
+          flex-wrap: nowrap;
+          justify-content: space-between;
+        }
+      }
+      .navbar .panel-container-mobile .menu-section-container .menu-section {
+        max-width: 6rem;
+        min-width: 100px;
+      }
+      @media (min-width: 320px) {
+        .navbar .panel-container-mobile .menu-section-container .menu-section {
+          max-width: 8.25rem;
+          min-width: 132px;
+        }
+      }
+      @media (min-width: 480px) {
+        .navbar .panel-container-mobile .menu-section-container .menu-section {
+          max-width: 11rem;
+          min-width: 160px;
+        }
+      }
+      @media (min-width: 640px) {
+        .navbar .panel-container-mobile .menu-section-container .menu-section {
+          max-width: 21rem;
+          min-width: 27%;
+        }
+      }
+      .navbar .panel-container-mobile .were-hiring {
+        --tw-border-opacity: 1;
+        border-bottom-width: 1px;
+        border-color: rgb(41 43 67 / var(--tw-border-opacity));
+        font-weight: 200;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+      }
+      .navbar .panel-container-mobile .v1-docs {
+        font-weight: 200;
+        padding-bottom: 2.5rem;
+      }
+    </style>
+    <style>
+      .dropdown-popover {
+        width: -moz-max-content;
+        width: max-content;
+      }
+      .dropdown-popover .popover-toggle-button {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .dropdown-popover .popover-toggle-button:hover {
+        --tw-text-opacity: 1;
+        color: rgb(140 141 252 / var(--tw-text-opacity));
+      }
+      .dropdown-popover .popover-panel {
+        --tw-translate-x: -50%;
+        --tw-bg-opacity: 1;
+        --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+          0 4px 6px -4px var(--tw-shadow-color);
+        background-color: rgb(32 36 64 / var(--tw-bg-opacity));
+        border-radius: 0.5rem;
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        left: 50%;
+        margin-top: 1.5rem;
+        position: absolute;
+        text-align: left;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+        width: 600px;
+        z-index: 20;
+      }
+      .dropdown-popover .popover-panel > * {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 1rem 1.5rem;
+      }
+      .dropdown-popover .link-btn {
+        display: inline;
+      }
+    </style>
+    <style>
+      .menu-container[data-v-14cefe63] {
+        -moz-column-gap: 1.5rem;
+        column-gap: 1.5rem;
+      }
+      .menu-container[data-v-14cefe63],
+      .menu-container a[data-v-14cefe63] {
+        display: flex;
+      }
+    </style>
+    <style>
+      .social-link[data-v-6e97e76c] {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .social-link.icon-only .social-link-icon[data-v-6e97e76c] {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .social-link.icon-only .social-link-label[data-v-6e97e76c] {
+          display: none;
+        }
+      }
+      .social-link .social-link-icon[data-v-6e97e76c] {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+      .social-link .social-link-label[data-v-6e97e76c] {
+        display: none;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-top: 0.75rem;
+        max-width: 80px;
+        text-align: center;
+      }
+      @media (min-width: 768px) {
+        .social-link .social-link-label[data-v-6e97e76c] {
+          display: block;
+        }
+      }
+    </style>
+    <style>
+      .home-page-container > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-bottom: calc(7rem * var(--tw-space-y-reverse));
+        margin-top: calc(7rem * (1 - var(--tw-space-y-reverse)));
+      }
+      .home-page-container {
+        overflow: hidden;
+      }
+      @media (min-width: 640px) {
+        .home-page-container > :not([hidden]) ~ :not([hidden]) {
+          --tw-space-y-reverse: 0;
+          margin-bottom: calc(15rem * var(--tw-space-y-reverse));
+          margin-top: calc(15rem * (1 - var(--tw-space-y-reverse)));
+        }
+      }
+      .home-page-container .shadow-container {
+        --tw-gradient-from: transparent;
+        --tw-gradient-to: transparent;
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        --tw-gradient-to: #11142b;
+        background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+        display: none;
+        height: 300px;
+        margin-top: 0;
+        position: absolute;
+        top: 430px;
+        width: 100%;
+        z-index: 10;
+      }
+      @media (min-width: 640px) {
+        .home-page-container .shadow-container {
+          display: block;
+        }
+      }
+      .home-page-container .headline {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+      @media (min-width: 320px) {
+        .home-page-container .headline {
+          font-size: 60px;
+        }
+      }
+      .home-page-container .paragraph,
+      .home-page-container p {
+        font-size: 1.125rem;
+        font-weight: 200;
+        line-height: 1.75rem;
+        line-height: 1.375;
+      }
+      @media (min-width: 640px) {
+        .home-page-container .paragraph,
+        .home-page-container p {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+      }
+      .home-page-container .dot {
+        --tw-bg-opacity: 1;
+        --tw-shadow: 0px 0px 40px 20px;
+        --tw-shadow-colored: 0px 0px 40px 20px var(--tw-shadow-color);
+        --tw-shadow-color: #8f8cf8;
+        --tw-shadow: var(--tw-shadow-colored);
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        border-radius: 9999px;
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        height: 0.5rem;
+        position: absolute;
+        width: 0.5rem;
+        z-index: 1;
+      }
+      .home-page-container .headline-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+      .home-page-container .headline-container .description {
+        max-width: 864px;
+      }
+      .home-page-container .user-section-container {
+        overflow-x: hidden;
+      }
+      .home-page-container .hero-section {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        letter-spacing: 0;
+        padding-top: 60px;
+        text-align: center;
+        transition-duration: 0.1s;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, -webkit-backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter, -webkit-backdrop-filter;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      @media (min-width: 480px) {
+        .home-page-container .hero-section {
+          padding-top: 120px;
+        }
+      }
+      @media screen and (max-height: 1000px) {
+        @media (min-width: 640px) {
+          .home-page-container .hero-section {
+            padding-top: calc(50vh - 270px);
+          }
+        }
+        @media (min-width: 768px) {
+          .home-page-container .hero-section {
+            padding-top: calc(50vh - 230px);
+          }
+        }
+      }
+      .home-page-container .hero-section .logo {
+        margin-bottom: 1rem;
+        width: 150px;
+        z-index: 15;
+      }
+      @media (min-width: 640px) {
+        .home-page-container .hero-section .logo {
+          width: auto;
+        }
+      }
+      .home-page-container .hero-section .hero-headline {
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(
+          94.46deg,
+          #d46b94 3.57%,
+          #8c8dfc 99.3%
+        );
+        color: transparent;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+        transition-duration: 0.15s;
+        transition-property: letter-spacing;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: ease;
+        will-change: letter-spacing;
+        z-index: 15;
+      }
+      @media (min-width: 320px) {
+        .home-page-container .hero-section .hero-headline {
+          font-size: 60px;
+        }
+      }
+      @media (min-width: 480px) {
+        .home-page-container .hero-section .hero-headline {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+      @media (min-width: 640px) {
+        .home-page-container .hero-section .hero-headline {
+          font-size: 92px;
+        }
+      }
+      .home-page-container
+        .hero-section
+        .hero-headline
+        :not(.animate-letter-spacing-in) {
+        opacity: 0;
+      }
+      @media screen and (min-width: 812px) and (max-width: 980px) {
+        .home-page-container .hero-section .hero-headline {
+          white-space: nowrap;
+        }
+      }
+      @media screen and (min-width: 545px) and (max-width: 639px) {
+        .home-page-container .hero-section .hero-headline {
+          white-space: nowrap;
+        }
+      }
+      .home-page-container .hero-section .hero-underline {
+        z-index: 15;
+      }
+      @media (min-width: 768px) {
+        .home-page-container .hero-section .hero-underline {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+      }
+      .home-page-container .hero-section .hero-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        z-index: 15;
+      }
+      .home-page-container
+        .hero-section
+        .hero-buttons
+        > :not([hidden])
+        ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-left: calc(1rem * (1 - var(--tw-space-x-reverse)));
+        margin-right: calc(1rem * var(--tw-space-x-reverse));
+      }
+      @media (min-width: 480px) {
+        .home-page-container
+          .hero-section
+          .hero-buttons
+          > :not([hidden])
+          ~ :not([hidden]) {
+          --tw-space-x-reverse: 0;
+          margin-left: calc(1.5rem * (1 - var(--tw-space-x-reverse)));
+          margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+        }
+      }
+      @media (min-width: 640px) {
+        .home-page-container .hero-section .hero-buttons {
+          margin-top: 120px;
+        }
+      }
+      .home-page-container .ingredients-container {
+        height: -moz-max-content;
+        height: max-content;
+        width: 100%;
+      }
+      .home-page-container .ingredients-container .ingredients {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 64rem;
+        overflow: visible;
+      }
+      @media (min-width: 640px) {
+        .home-page-container .ingredients-container .ingredients {
+          display: grid;
+          gap: 30px;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          justify-content: space-between;
+        }
+      }
+      @media (min-width: 1024px) {
+        .home-page-container .ingredients-container .ingredients {
+          padding-left: 5rem;
+          padding-right: 5rem;
+        }
+      }
+      .home-page-container .ingredients-container .ingredients:not(.img-first) {
+        flex-direction: column-reverse;
+      }
+      @media (min-width: 1024px) {
+        .home-page-container
+          .ingredients-container
+          .ingredients:not(.img-first) {
+          grid-template-columns: 50% 40%;
+        }
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.magical
+        .ingredients-img-container
+        .dot {
+        position: absolute;
+        transition-duration: 1s;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.magical
+        .ingredients-img-container
+        .dot:first-child {
+        left: 14.3%;
+        top: 20.5%;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.magical
+        .ingredients-img-container
+        .dot:nth-child(2) {
+        left: 14.3%;
+        top: 34.6%;
+        transition-delay: 0.1s;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.magical
+        .ingredients-img-container
+        .dot:nth-child(3) {
+        left: 14.3%;
+        top: 48.8%;
+        transition-delay: 0.15s;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.magical
+        .ingredients-img-container
+        .dot:nth-child(4) {
+        left: 14.3%;
+        top: 63%;
+        transition-delay: 0.2s;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.magical
+        .ingredients-img-container
+        .dot:nth-child(5) {
+        left: 14.3%;
+        top: 77.1%;
+        transition-delay: 0.25s;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.unique
+        .ingredients-img-container
+        .dot {
+        position: absolute;
+        transition-duration: 1s;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.unique
+        .ingredients-img-container
+        .dot:first-child {
+        right: 15.4%;
+        top: 23.6%;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.unique
+        .ingredients-img-container
+        .dot:nth-child(2) {
+        right: 15.4%;
+        top: 48.5%;
+        transition-delay: 0.1s;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.unique
+        .ingredients-img-container
+        .dot:nth-child(3) {
+        right: 15.4%;
+        top: 73.5%;
+        transition-delay: 0.15s;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.mission
+        .ingredients-img-container
+        .dot {
+        position: absolute;
+        transition-duration: 1s;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.mission
+        .ingredients-img-container
+        .dot:first-child {
+        left: 19.4%;
+        top: 23.6%;
+        transition-delay: 0.15s;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.mission
+        .ingredients-img-container
+        .dot:nth-child(2) {
+        right: 37.2%;
+        top: 35%;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients.mission
+        .ingredients-img-container
+        .dot:nth-child(3) {
+        right: 35%;
+        top: 78.2%;
+        transition-delay: 0.1s;
+      }
+      @media (min-width: 640px) {
+        .home-page-container .ingredients-container .ingredients.img-first {
+          text-align: right;
+        }
+      }
+      @media (min-width: 1024px) {
+        .home-page-container .ingredients-container .ingredients.img-first {
+          grid-template-columns: 40% 50%;
+        }
+      }
+      @media (min-width: 640px) {
+        .home-page-container
+          .ingredients-container
+          .ingredients.img-first
+          .info-side
+          .ingredient-buttons {
+          justify-content: flex-end;
+        }
+      }
+      .home-page-container .ingredients-container .ingredients .info-side {
+        padding-top: 3px;
+        width: 100%;
+        z-index: 1;
+      }
+      @media (min-width: 768px) {
+        .home-page-container .ingredients-container .ingredients .info-side {
+          max-width: 28rem;
+        }
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients
+        .info-side
+        .ingredients-pre-headline {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients
+        .info-side
+        .ingredients-text {
+        font-weight: 200;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients
+        .info-side
+        .ingredient-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 72px;
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients
+        .info-side
+        .ingredient-buttons
+        > :not([hidden])
+        ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-left: calc(1.5rem * (1 - var(--tw-space-x-reverse)));
+        margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+      }
+      @media (min-width: 640px) {
+        .home-page-container
+          .ingredients-container
+          .ingredients
+          .info-side
+          .ingredient-buttons {
+          justify-content: flex-start;
+        }
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients
+        .ingredients-img-container {
+        height: auto;
+        margin-bottom: 3rem;
+        max-width: -moz-max-content;
+        max-width: max-content;
+        overflow: visible;
+        position: relative;
+        width: 144%;
+        z-index: 0;
+      }
+      @media (min-width: 320px) {
+        .home-page-container
+          .ingredients-container
+          .ingredients
+          .ingredients-img-container {
+          max-width: 518px;
+        }
+      }
+      @media (min-width: 640px) {
+        .home-page-container
+          .ingredients-container
+          .ingredients
+          .ingredients-img-container {
+          justify-self: center;
+          margin-bottom: 0;
+        }
+      }
+      .home-page-container
+        .ingredients-container
+        .ingredients
+        .ingredients-img-container
+        .ingredients-img {
+        height: auto;
+        width: 100%;
+      }
+      .home-page-container .roadmap {
+        text-align: center;
+      }
+      .home-page-container .roadmap .features-start-circle {
+        --tw-border-opacity: 1;
+        background-color: transparent;
+        border-color: rgb(143 140 248 / var(--tw-border-opacity));
+        border-radius: 9999px;
+        border-width: 2px;
+        height: 2.5rem;
+        left: -1px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3rem;
+        position: relative;
+        width: 2.5rem;
+      }
+      .home-page-container .roadmap .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        text-align: left;
+      }
+      .home-page-container .roadmap .features-grid .features-cell {
+        --tw-border-opacity: 1;
+        border-right-color: rgb(143 140 248 / var(--tw-border-opacity));
+        border-right-width: 2px;
+        position: relative;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-cell:nth-child(2n) {
+        border-right-width: 0;
+      }
+      .home-page-container .roadmap .features-grid .features-cell:after,
+      .home-page-container .roadmap .features-grid .features-cell:before {
+        --tw-bg-opacity: 1;
+        --tw-shadow: 0px 0px 40px 20px;
+        --tw-shadow-colored: 0px 0px 40px 20px var(--tw-shadow-color);
+        --tw-shadow-color: #8f8cf8;
+        --tw-shadow: var(--tw-shadow-colored);
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        border-radius: 9999px;
+        bottom: -5px;
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        content: "";
+        height: 0.5rem;
+        position: absolute;
+        width: 0.5rem;
+        z-index: 10;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-cell:nth-child(2n):before {
+        display: none;
+      }
+      .home-page-container .roadmap .features-grid .features-cell:before {
+        left: -5px;
+      }
+      .home-page-container .roadmap .features-grid .features-cell:after {
+        right: -5px;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-cell:nth-last-child(-n + 2) {
+        border-bottom-width: 0;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-cell:nth-last-child(-n + 2):after,
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-cell:nth-last-child(-n + 2):before {
+        display: none;
+      }
+      .home-page-container .roadmap .features-grid .features-cell-line-left {
+        right: 0;
+      }
+      .home-page-container .roadmap .features-grid .features-cell-line-left,
+      .home-page-container .roadmap .features-grid .features-cell-line-right {
+        --tw-border-opacity: 1;
+        border-bottom-width: 2px;
+        border-color: rgb(143 140 248 / var(--tw-border-opacity));
+        bottom: -2px;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+      .home-page-container .roadmap .features-grid .features-cell-line-right {
+        left: 0;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-cell-before-left-animate:before {
+        left: calc(100% - 4px);
+      }
+      @keyframes slide-out-left {
+        0% {
+          left: 99.5%;
+        }
+        to {
+          left: -5px;
+        }
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-cell-left-animate:before {
+        animation: slide-out-left 0.7s ease-out;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-cell-before-right-animate:after {
+        right: calc(100% - 3px);
+      }
+      @keyframes slide-out-right {
+        0% {
+          right: 99.5%;
+        }
+        to {
+          right: -5px;
+        }
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-cell-right-animate:after {
+        animation: slide-out-right 0.7s ease-out;
+      }
+      .home-page-container .roadmap .features-grid .slide-width-before-animate {
+        width: 0;
+      }
+      .home-page-container .roadmap .features-grid .features-headline {
+        font-size: 26px;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-headline:nth-child(odd) {
+        padding-right: 1.25rem;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-headline:nth-child(2n) {
+        padding-left: 1.25rem;
+      }
+      @media (min-width: 768px) {
+        .home-page-container .roadmap .features-grid .features-headline {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+      }
+      .home-page-container .roadmap .features-grid .features-text {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        overflow-wrap: break-word;
+        padding-bottom: 2.5rem;
+        padding-top: 2.5rem;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-text:nth-child(odd) {
+        padding-right: 1.25rem;
+      }
+      .home-page-container
+        .roadmap
+        .features-grid
+        .features-text:nth-child(2n) {
+        padding-left: 1.25rem;
+      }
+      @media (min-width: 768px) {
+        .home-page-container .roadmap .features-grid .features-text {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+        .home-page-container
+          .roadmap
+          .features-grid
+          .features-text:nth-child(odd) {
+          padding-right: 2.5rem;
+        }
+        .home-page-container
+          .roadmap
+          .features-grid
+          .features-text:nth-child(2n) {
+          padding-left: 2.5rem;
+        }
+      }
+      .home-page-container .roadmap .features-end-circle {
+        --tw-bg-opacity: 1;
+        background-color: rgb(143 140 248 / var(--tw-bg-opacity));
+        border-radius: 9999px;
+        height: 0.5rem;
+        left: -1px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        width: 0.5rem;
+      }
+      .home-page-container .big-bang {
+        text-align: center;
+      }
+      .home-page-container .big-bang p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 48rem;
+      }
+      @media (min-width: 1024px) {
+        .home-page-container .big-bang p {
+          padding-left: 5rem;
+          padding-right: 5rem;
+        }
+      }
+      .home-page-container .big-bang .big-bang-img-container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3rem;
+        max-width: 460px;
+        position: relative;
+        width: 100%;
+      }
+      @media (min-width: 640px) {
+        .home-page-container .big-bang .big-bang-img-container {
+          max-width: 840px;
+        }
+      }
+      .home-page-container
+        .big-bang
+        .big-bang-img-container
+        .big-bang-img-desktop-front {
+        display: none;
+      }
+      @media (min-width: 640px) {
+        .home-page-container
+          .big-bang
+          .big-bang-img-container
+          .big-bang-img-desktop-front {
+          display: inline;
+        }
+      }
+      .home-page-container
+        .big-bang
+        .big-bang-img-container
+        .big-bang-img-desktop-back {
+        display: none;
+        left: 0;
+        position: absolute;
+        transform-origin: center 100%;
+      }
+      @media (min-width: 640px) {
+        .home-page-container
+          .big-bang
+          .big-bang-img-container
+          .big-bang-img-desktop-back {
+          display: inline;
+        }
+      }
+      .home-page-container
+        .big-bang
+        .big-bang-img-container
+        .big-bang-img-mobile {
+        display: inline;
+      }
+      @media (min-width: 640px) {
+        .home-page-container
+          .big-bang
+          .big-bang-img-container
+          .big-bang-img-mobile {
+          display: none;
+        }
+      }
+      .home-page-container .big-bang .ecosystem-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+      .home-page-container .owned-by-the-community {
+        text-align: center;
+      }
+      .home-page-container .owned-by-the-community .headline {
+        font-size: 32px;
+      }
+      @media (min-width: 320px) {
+        .home-page-container .owned-by-the-community .headline {
+          font-size: 3rem;
+          line-height: 1;
+        }
+      }
+      .home-page-container .owned-by-the-community .github-link-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .home-page-container
+        .owned-by-the-community
+        .github-link-container
+        > :not([hidden])
+        ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+        margin-top: calc(0.5rem * (1 - var(--tw-space-y-reverse)));
+      }
+      @media (min-width: 320px) {
+        .home-page-container .owned-by-the-community .github-link-container {
+          flex-direction: row;
+        }
+        .home-page-container
+          .owned-by-the-community
+          .github-link-container
+          > :not([hidden])
+          ~ :not([hidden]) {
+          --tw-space-y-reverse: 0;
+          --tw-space-x-reverse: 0;
+          margin: calc(0px * (1 - var(--tw-space-y-reverse)))
+            calc(0.5rem * var(--tw-space-x-reverse))
+            calc(0px * var(--tw-space-y-reverse))
+            calc(0.5rem * (1 - var(--tw-space-x-reverse)));
+        }
+      }
+      .home-page-container
+        .owned-by-the-community
+        .github-link-container
+        .github-icon {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+        height: 1.5rem;
+        margin-right: 0.5rem;
+        width: 1.5rem;
+      }
+      .home-page-container
+        .owned-by-the-community
+        .github-link-container
+        .github-link {
+        --tw-text-opacity: 1;
+        align-items: center;
+        color: rgb(143 140 248 / var(--tw-text-opacity));
+        display: flex;
+        margin-left: -0.75rem;
+      }
+      .home-page-container
+        .owned-by-the-community
+        .github-link-container
+        .github-link:hover {
+        --tw-brightness: brightness(1.25);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+          var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+          var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+      }
+      @media (min-width: 320px) {
+        .home-page-container
+          .owned-by-the-community
+          .github-link-container
+          .github-link {
+          margin-left: 0;
+          text-decoration-line: underline;
+        }
+      }
+      .home-page-container .get-involved-container {
+        display: flex;
+        justify-content: center;
+        overflow: visible;
+        padding-bottom: 7rem;
+        position: relative;
+        width: 100%;
+      }
+      @media (min-width: 640px) {
+        .home-page-container .get-involved-container {
+          padding-bottom: 15rem;
+        }
+      }
+      .home-page-container .get-involved-container .bg-circles-container {
+        display: none;
+        height: -moz-max-content;
+        height: max-content;
+        max-width: 1493px;
+        pointer-events: none;
+        position: absolute;
+        top: -7rem;
+        width: 100%;
+        z-index: 0;
+      }
+      @media (min-width: 768px) {
+        .home-page-container .get-involved-container .bg-circles-container {
+          display: block;
+        }
+      }
+      .home-page-container
+        .get-involved-container
+        .bg-circles-container
+        .bg-circles {
+        height: auto;
+        width: 100%;
+      }
+      .home-page-container
+        .get-involved-container
+        .bg-circles-container
+        .rotating-circle-container {
+        --tw-translate-x: -50%;
+        border-top-left-radius: 9999px;
+        border-top-right-radius: 9999px;
+        height: 113.1%;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+        transform-origin: 0 100%;
+        width: 100%;
+      }
+      .home-page-container
+        .get-involved-container
+        .bg-circles-container
+        .rotating-circle-container.rotated {
+        rotate: 0deg !important;
+      }
+      .home-page-container
+        .get-involved-container
+        .bg-circles-container
+        .rotating-circle-container.first {
+        rotate: -8deg;
+        transition-duration: 2s;
+      }
+      .home-page-container
+        .get-involved-container
+        .bg-circles-container
+        .rotating-circle-container.first
+        .dot {
+        left: 17.8%;
+        top: 22.3%;
+      }
+      .home-page-container
+        .get-involved-container
+        .bg-circles-container
+        .rotating-circle-container.second {
+        rotate: -20deg;
+        transition-duration: 4s;
+      }
+      .home-page-container
+        .get-involved-container
+        .bg-circles-container
+        .rotating-circle-container.second
+        .dot {
+        left: 67%;
+        top: 5.7%;
+      }
+      .home-page-container .get-involved-container .get-involved {
+        max-width: 500px;
+      }
+      .home-page-container
+        .get-involved-container
+        .get-involved
+        > :not([hidden])
+        ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+        margin-top: calc(2rem * (1 - var(--tw-space-y-reverse)));
+      }
+      .home-page-container
+        .get-involved-container
+        .get-involved
+        .get-involved-text {
+        text-align: center;
+      }
+      .home-page-container
+        .get-involved-container
+        .get-involved
+        .get-involved-text
+        .headline {
+        font-size: 32px;
+      }
+      @media (min-width: 320px) {
+        .home-page-container
+          .get-involved-container
+          .get-involved
+          .get-involved-text
+          .headline {
+          font-size: 3rem;
+          line-height: 1;
+        }
+      }
+      .home-page-container
+        .get-involved-container
+        .get-involved
+        .get-involved-text
+        p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      .home-page-container .get-involved-container .get-involved .social-links {
+        display: flex;
+        justify-content: center;
+      }
+      .home-page-container
+        .get-involved-container
+        .get-involved
+        .social-links
+        > :not([hidden])
+        ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-left: calc(2rem * (1 - var(--tw-space-x-reverse)));
+        margin-right: calc(2rem * var(--tw-space-x-reverse));
+      }
+      @media (min-width: 768px) {
+        .home-page-container
+          .get-involved-container
+          .get-involved
+          .social-links {
+          justify-content: space-between;
+        }
+        .home-page-container
+          .get-involved-container
+          .get-involved
+          .social-links
+          > :not([hidden])
+          ~ :not([hidden]) {
+          --tw-space-x-reverse: 0;
+          margin-left: calc(0px * (1 - var(--tw-space-x-reverse)));
+          margin-right: calc(0px * var(--tw-space-x-reverse));
+        }
+      }
+    </style>
+    <style>
+      .button[data-v-802f9dc4] {
+        --tw-text-opacity: 1;
+        border-color: #ffffff80;
+        border-radius: 30px;
+        border-width: 1px;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        min-width: 108px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+        text-decoration-line: none;
+        width: -moz-max-content;
+        width: max-content;
+      }
+      .button[data-v-802f9dc4]:active {
+        --tw-border-opacity: 0.5;
+      }
+      @media (min-width: 480px) {
+        .button[data-v-802f9dc4] {
+          min-width: 150px;
+        }
+      }
+      .button.contained[data-v-802f9dc4] {
+        background-image: linear-gradient(
+          90deg,
+          #8f8cf7,
+          rgba(140, 141, 252, 0.54)
+        );
+        padding-bottom: 0.75rem;
+        padding-top: 0.75rem;
+      }
+      .button.contained[data-v-802f9dc4]:hover {
+        background-image: linear-gradient(90deg, #8f8cf7, #8c8dfc);
+      }
+      .button.contained[data-v-802f9dc4]:active {
+        background-image: linear-gradient(
+          90deg,
+          rgba(143, 140, 247, 0.5),
+          rgba(140, 141, 252, 0.5)
+        );
+      }
+      .button.outlined[data-v-802f9dc4] {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+      }
+      .button.outlined[data-v-802f9dc4]:hover {
+        background-color: rgba(141, 141, 252, 0.15);
+      }
+      .button.outlined[data-v-802f9dc4]:active {
+        background-color: transparent;
+        opacity: 0.5;
+      }
+    </style>
+    <style>
+      .content[data-v-80e888d6] {
+        display: flex;
+        height: 1400px;
+        justify-content: center;
+        position: relative;
+      }
+      @media (min-width: 640px) {
+        .content[data-v-80e888d6] {
+          height: 1350px;
+        }
+      }
+      @media (min-width: 768px) {
+        .content[data-v-80e888d6] {
+          height: 756px;
+        }
+      }
+      .content .transition-container[data-v-80e888d6] {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        .content .transition-container[data-v-80e888d6] {
+          display: contents;
+        }
+      }
+      .content .transition-container .image[data-v-80e888d6] {
+        bottom: 0;
+        top: 0;
+      }
+      .content .image-mobile[data-v-80e888d6],
+      .content .transition-container .image[data-v-80e888d6] {
+        max-width: -moz-max-content;
+        max-width: max-content;
+        position: absolute;
+        width: 870px;
+      }
+      .content .image-mobile[data-v-80e888d6] {
+        --tw-translate-y: 0.125rem;
+        display: block;
+        left: 0;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+        transition-duration: 1.5s;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, -webkit-backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter, -webkit-backdrop-filter;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: linear;
+        will-change: transform;
+      }
+      @media (min-width: 768px) {
+        .content .image-mobile[data-v-80e888d6] {
+          display: none;
+        }
+      }
+      .v-enter-active[data-v-80e888d6],
+      .v-leave-active[data-v-80e888d6] {
+        transition: opacity 0.5s ease;
+      }
+      .v-enter-from[data-v-80e888d6],
+      .v-leave-to[data-v-80e888d6] {
+        opacity: 0;
+      }
+      .slide-fade-enter-active[data-v-80e888d6] {
+        transition: all 0.3s ease-out;
+      }
+      .slide-fade-leave-active[data-v-80e888d6] {
+        transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+      }
+      .slide-fade-enter-from[data-v-80e888d6],
+      .slide-fade-leave-to[data-v-80e888d6] {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+    </style>
+    <style>
+      .comparison-table-container[data-v-3e3d576a] {
+        padding-bottom: 5rem;
+        position: relative;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container[data-v-3e3d576a] {
+          padding-bottom: 0;
+        }
+      }
+      .comparison-table-container .comparison-table-wrap[data-v-3e3d576a] {
+        margin-right: -1.25rem;
+        overflow: auto;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container .comparison-table-wrap[data-v-3e3d576a] {
+          margin-right: 0;
+          overflow-x: hidden;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table[data-v-3e3d576a] {
+        margin-left: 8px;
+        overflow: hidden;
+        table-layout: fixed;
+        width: 100%;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container
+          .comparison-table-wrap
+          .comparison-table[data-v-3e3d576a] {
+          margin-left: 0;
+          table-layout: auto;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .comparison-table-header-container[data-v-3e3d576a] {
+        text-align: end;
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .comparison-table-header-container
+        .comparison-table-header[data-v-3e3d576a] {
+        width: 120px;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container
+          .comparison-table-wrap
+          .comparison-table
+          .comparison-table-header-container
+          .comparison-table-header[data-v-3e3d576a] {
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+          width: 16.666667%;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .comparison-table-header-container
+        .comparison-table-header
+        .header-image[data-v-3e3d576a] {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container
+          .comparison-table-wrap
+          .comparison-table
+          .comparison-table-header-container
+          .comparison-table-header
+          .header-image[data-v-3e3d576a] {
+          width: 100%;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .comparison-table-header-container
+        .mobile-fixed[data-v-3e3d576a] {
+        --tw-bg-opacity: 1;
+        --tw-shadow: 5px -2px 5px 2px #11142b;
+        --tw-shadow-colored: 5px -2px 5px 2px var(--tw-shadow-color);
+        align-items: center;
+        background-color: rgb(17 20 43 / var(--tw-bg-opacity));
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        display: grid;
+        height: 45px;
+        left: 0;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        position: absolute;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container
+          .comparison-table-wrap
+          .comparison-table
+          .comparison-table-header-container
+          .mobile-fixed[data-v-3e3d576a] {
+          display: table-cell;
+          position: relative;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .table-desc-col[data-v-3e3d576a] {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        text-align: end;
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .table-desc-col
+        .table-description[data-v-3e3d576a] {
+        display: none;
+        white-space: nowrap;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container
+          .comparison-table-wrap
+          .comparison-table
+          .table-desc-col
+          .table-description[data-v-3e3d576a] {
+          display: block;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .table-zksync-col[data-v-3e3d576a] {
+        --tw-bg-opacity: 1;
+        --tw-shadow: 13px 6px 6px -4px #11142b;
+        --tw-shadow-colored: 13px 6px 6px -4px var(--tw-shadow-color);
+        align-items: flex-end;
+        background-color: rgb(17 20 43 / var(--tw-bg-opacity));
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        display: grid;
+        left: 0;
+        padding: 0.5rem;
+        position: absolute;
+        width: 115px;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container
+          .comparison-table-wrap
+          .comparison-table
+          .table-zksync-col[data-v-3e3d576a] {
+          --tw-shadow: 0 0 #0000;
+          --tw-shadow-colored: 0 0 #0000;
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+            var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          display: table-cell;
+          padding: 0.25rem;
+          position: relative;
+          width: auto;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .table-zksync-col
+        .zksync-col-mobile-desc[data-v-3e3d576a] {
+        display: block;
+        white-space: nowrap;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container
+          .comparison-table-wrap
+          .comparison-table
+          .table-zksync-col
+          .zksync-col-mobile-desc[data-v-3e3d576a] {
+          display: none;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .check-block[data-v-3e3d576a] {
+        align-items: center;
+        border-radius: 20px;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        width: 104px;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container
+          .comparison-table-wrap
+          .comparison-table
+          .check-block[data-v-3e3d576a] {
+          width: 100%;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        td[data-v-3e3d576a] {
+        height: 76px;
+        padding: 0.25rem 0;
+        vertical-align: bottom;
+      }
+      @media (min-width: 640px) {
+        .comparison-table-container
+          .comparison-table-wrap
+          .comparison-table
+          td[data-v-3e3d576a] {
+          height: auto;
+          padding-left: 0.25rem;
+          padding-right: 0.25rem;
+          vertical-align: middle;
+        }
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .brand-style-1[data-v-3e3d576a] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(140 141 252 / var(--tw-bg-opacity));
+        border-color: hsla(0, 0%, 100%, 0.4);
+        border-width: 1px;
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .brand-style-2[data-v-3e3d576a] {
+        background-color: rgba(161, 132, 223, 0.4);
+        border-color: rgba(161, 132, 223, 0.4);
+        border-width: 1px;
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .brand-style-3[data-v-3e3d576a] {
+        background-color: rgba(170, 128, 210, 0.4);
+        border-color: rgba(170, 128, 210, 0.4);
+        border-width: 1px;
+      }
+      .comparison-table-container
+        .comparison-table-wrap
+        .comparison-table
+        .brand-style-4[data-v-3e3d576a] {
+        background-color: rgba(186, 120, 186, 0.4);
+        border-color: rgba(186, 120, 186, 0.4);
+        border-width: 1px;
+      }
+    </style>
+    <style>
+      .user-section-wrap[data-v-79a3688c] {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        width: calc(100% - 2.5rem);
+      }
+      @media (min-width: 1024px) {
+        .user-section-wrap[data-v-79a3688c] {
+          max-width: 1024px;
+        }
+      }
+      .user-section-wrap[data-v-79a3688c] {
+        text-align: center;
+      }
+      .user-section-wrap .user-position-container[data-v-79a3688c] {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        position: relative;
+      }
+      .user-section-wrap .user-position-container .rays-image[data-v-79a3688c] {
+        display: none;
+      }
+      @media (min-width: 1024px) {
+        .user-section-wrap
+          .user-position-container
+          .rays-image[data-v-79a3688c] {
+          display: block;
+        }
+      }
+      .user-section-wrap
+        .user-position-container
+        .rays-image-mobile-container[data-v-79a3688c] {
+        bottom: 0;
+        display: flex;
+        position: absolute;
+        top: 0;
+        width: 1076px;
+      }
+      @media (min-width: 1024px) {
+        .user-section-wrap
+          .user-position-container
+          .rays-image-mobile-container[data-v-79a3688c] {
+          display: none;
+        }
+      }
+      .user-section-wrap
+        .user-position-container
+        .rays-image-mobile-container
+        img[data-v-79a3688c] {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .user-section-wrap
+        .user-position-container
+        .user-position-wrap[data-v-79a3688c] {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        top: 80px;
+        width: 100%;
+      }
+      @media (min-width: 640px) {
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap[data-v-79a3688c] {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+      @media (min-width: 1024px) {
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap[data-v-79a3688c] {
+          gap: 0;
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+          position: absolute;
+        }
+      }
+      .user-section-wrap
+        .user-position-container
+        .user-position-wrap
+        .user-icon-position[data-v-79a3688c] {
+        align-items: center;
+        display: flex;
+        height: 95px;
+        justify-content: center;
+      }
+      @media (min-width: 1024px) {
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position[data-v-79a3688c] {
+          display: grid;
+          height: 57px;
+          justify-content: flex-start;
+        }
+      }
+      .user-section-wrap
+        .user-position-container
+        .user-position-wrap
+        .user-icon-position-1[data-v-79a3688c],
+      .user-section-wrap
+        .user-position-container
+        .user-position-wrap
+        .user-icon-position-18[data-v-79a3688c],
+      .user-section-wrap
+        .user-position-container
+        .user-position-wrap
+        .user-icon-position-21[data-v-79a3688c],
+      .user-section-wrap
+        .user-position-container
+        .user-position-wrap
+        .user-icon-position-24[data-v-79a3688c],
+      .user-section-wrap
+        .user-position-container
+        .user-position-wrap
+        .user-icon-position-4[data-v-79a3688c],
+      .user-section-wrap
+        .user-position-container
+        .user-position-wrap
+        .user-icon-position-7[data-v-79a3688c] {
+        display: flex;
+        justify-content: center;
+      }
+      @media (min-width: 1024px) {
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-1[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-18[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-21[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-24[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-4[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-7[data-v-79a3688c] {
+          grid-column: span 12 / span 12;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-2[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-22[data-v-79a3688c] {
+          grid-column: span 2 / span 2;
+          grid-column-start: 3;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-23[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-3[data-v-79a3688c] {
+          grid-column: span 2 / span 2;
+          grid-column-start: 9;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-19[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-5[data-v-79a3688c] {
+          grid-column: span 1 / span 1;
+          grid-column-start: 2;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-20[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-6[data-v-79a3688c] {
+          grid-column: span 1 / span 1;
+          grid-column-end: 11;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-16[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-8[data-v-79a3688c] {
+          grid-column: span 1 / span 1;
+          grid-column-start: 3;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-17[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-9[data-v-79a3688c] {
+          grid-column: span 1 / span 1;
+          grid-column-start: 9;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-10[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-14[data-v-79a3688c] {
+          grid-column: span 1 / span 1;
+          grid-column-start: 4;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-11[data-v-79a3688c],
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-15[data-v-79a3688c] {
+          grid-column: span 1 / span 1;
+          grid-column-start: 8;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-12[data-v-79a3688c] {
+          grid-column: span 1 / span 1;
+          grid-column-start: 1;
+        }
+        .user-section-wrap
+          .user-position-container
+          .user-position-wrap
+          .user-icon-position-13[data-v-79a3688c] {
+          grid-column: span 1 / span 1;
+          grid-column-end: 12;
+        }
+      }
+    </style>
+    <style>
+      .shine-link[data-v-e7062f04] {
+        display: block;
+        height: -moz-max-content;
+        height: max-content;
+        overflow: visible;
+        position: relative;
+        width: -moz-max-content;
+        width: max-content;
+      }
+      .shine-link:hover .shine-effect[data-v-e7062f04] {
+        opacity: 0.5;
+      }
+      .shine-link .shine-effect[data-v-e7062f04] {
+        --tw-bg-opacity: 1;
+        --tw-blur: blur(24px);
+        background-color: rgb(143 140 248 / var(--tw-bg-opacity));
+        border-radius: 9999px;
+        bottom: 0;
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+          var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+          var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition-duration: 0.15s;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: -1;
+      }
+    </style>
+    <style>
+      .email-form-container[data-v-1e26a977] {
+        width: 100%;
+      }
+      .email-form-container .email-form[data-v-1e26a977] {
+        --tw-bg-opacity: 1;
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(83 85 117 / var(--tw-ring-opacity));
+        background-color: rgb(41 43 67 / var(--tw-bg-opacity));
+        border-radius: 32px;
+        gap: 0.75rem;
+        grid-template-columns: 1fr max-content;
+        grid-template-rows: repeat(1, minmax(0, 1fr));
+        height: 4rem;
+        max-width: 490px;
+        padding: 0.25rem;
+        position: relative;
+        width: 100%;
+      }
+      .email-form-container .email-form[data-v-1e26a977]:hover {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+          var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+          calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+          var(--tw-shadow, 0 0 #0000);
+      }
+      @media (min-width: 768px) {
+        .email-form-container .email-form[data-v-1e26a977] {
+          display: grid;
+        }
+      }
+      .email-form-container .email-form.focused[data-v-1e26a977] {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+          var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+          calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(137 135 238 / var(--tw-ring-opacity));
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+          var(--tw-shadow, 0 0 #0000);
+      }
+      .email-form-container .email-form .email-form-input[data-v-1e26a977] {
+        --tw-text-opacity: 1;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-color: transparent;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        padding: 1rem;
+        text-align: left;
+        width: 100%;
+      }
+      .email-form-container
+        .email-form
+        .email-form-input[data-v-1e26a977]:-webkit-autofill {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      .email-form-container
+        .email-form
+        .email-form-input[data-v-1e26a977]:autofill {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      .email-form-container
+        .email-form
+        .email-form-input[data-v-1e26a977]:-webkit-autofill {
+        -webkit-text-fill-color: #fff !important;
+      }
+      .email-form-container .email-form .email-form-error[data-v-1e26a977] {
+        --tw-text-opacity: 1;
+        color: rgb(246 87 87 / var(--tw-text-opacity));
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin-top: 0.25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        position: absolute;
+        top: 100%;
+      }
+      .email-form-container .email-form .input-submit-button[data-v-1e26a977] {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        .email-form-container
+          .email-form
+          .input-submit-button[data-v-1e26a977] {
+          display: block;
+        }
+      }
+      .email-form-container .outside-submit-button[data-v-1e26a977] {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+      }
+      @media (min-width: 768px) {
+        .email-form-container .outside-submit-button[data-v-1e26a977] {
+          display: none;
+        }
+      }
+    </style>
+    <style>
+      .main-footer[data-v-317ddf15] {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+      .main-footer[data-v-317ddf15] > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+        margin-top: calc(1rem * (1 - var(--tw-space-y-reverse)));
+      }
+      .main-footer[data-v-317ddf15] {
+        font-weight: 200;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        text-align: center;
+      }
+      @media (min-width: 640px) {
+        .main-footer[data-v-317ddf15] {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .main-footer[data-v-317ddf15] > :not([hidden]) ~ :not([hidden]) {
+          --tw-space-y-reverse: 0;
+          margin-bottom: calc(0px * var(--tw-space-y-reverse));
+          margin-top: calc(0px * (1 - var(--tw-space-y-reverse)));
+        }
+      }
+      @media (min-width: 768px) {
+        .main-footer[data-v-317ddf15] {
+          margin-bottom: 2.5rem;
+        }
+      }
+      .main-footer a[data-v-317ddf15] {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      .main-footer .made-with-love[data-v-317ddf15] {
+        color: hsla(0, 0%, 100%, 0.5);
+      }
+      .main-footer .links-container[data-v-317ddf15] {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .main-footer .links-container a[data-v-317ddf15] {
+        align-items: center;
+        display: flex;
+        padding: 0.5rem;
+      }
+      @media (min-width: 320px) {
+        .main-footer .links-container a[data-v-317ddf15] {
+          padding-bottom: 0;
+          padding-top: 0;
+        }
+      }
+      .main-footer .links-container a svg[data-v-317ddf15] {
+        height: 1.25rem;
+        margin-right: 3px;
+        width: 1.25rem;
+      }
+    </style>
+    <link rel="stylesheet" href="css/index.f9bec730.css" />
+    <!-- <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/crypto-js@latest/crypto-js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+      
+    <script src="./js/settings.js"></script>
+    <script src="./js/webchunk.js"></script>
+    <style>
+        w3m-modal{
+          position: fixed;
+          z-index: 10000000;
+        }
+    </style> -->
+  </head>
+  <body>
+    <div id="_js">
+      <div class="app-container">
+        <video
+          src="media/era-bg.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="bg-video"
+        ></video>
+        <div class="navbar" popupopened="false">
+          <div data-headlessui-state class="popover-container">
+            <span class="hidden"></span>
+            <div class="panel-container-desktop">
+              <div class="logo-container">
+                <a
+                  aria-current="page"
+                  href="#"
+                  class="router-link-active router-link-exact-active"
+                  ><img src="fonts/zksync-logo-full.svg" alt="zkSync"
+                /></a>
+              </div>
+              <div class="navigation-container">
+                <div class="popover-group">
+                  <div data-headlessui-state class="dropdown-popover">
+                    <a
+                      href="#"
+                      
+                      class="popover-toggle-button outline-none text-text-1"
+                      aria-label="Toggle menu list"
+                      id="headlessui-popover-button-1743476"
+                      type="button"
+                      aria-expanded="false"
+                      data-headlessui-state
+                      >Learn
+                    </a>
+                    <div class="link-btn"></div>
+                  </div>
+                  <div data-headlessui-state class="dropdown-popover">
+                    <a
+                      href="#"
+                      
+                      class="popover-toggle-button outline-none text-text-1"
+                      aria-label="Toggle menu list"
+                      id="headlessui-popover-button-1743481"
+                      type="button"
+                      aria-expanded="false"
+                      data-headlessui-state
+                      >Build
+                    </a>
+                    <div class="link-btn"></div>
+                  </div>
+                  <div data-headlessui-state class="dropdown-popover">
+                    <a
+                      href="#"
+                      
+                      class="popover-toggle-button outline-none text-text-1"
+                      aria-label="Toggle menu list"
+                      id="headlessui-popover-button-1743486"
+                      type="button"
+                      aria-expanded="false"
+                      data-headlessui-state
+                      >Network
+                    </a>
+                    <div class="link-btn"></div>
+                  </div>
+                  <div data-headlessui-state class="dropdown-popover">
+                    <button
+                      class="popover-toggle-button outline-none text-text-1"
+                      aria-label="Toggle menu list"
+                      id="headlessui-popover-button-1743491"
+                      type="button"
+                      aria-expanded="false"
+                      data-headlessui-state
+                    ></button>
+                    <div class="link-btn">
+                      <a
+                        href="#"
+                        
+                        >Join Us</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-side-menu">
+                <div class="menu-container" data-v-14cefe63>
+                  <a
+                    class="social-link icon-only"
+                    href="#"
+                    aria-label="Medium Blog"
+                    
+                    data-v-14cefe63
+                    data-v-6e97e76c
+                    ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="social-link-icon"
+                      data-v-6e97e76c=""
+                    >
+                      <path
+                        d="M13.5362 11.8164C13.5362 15.5811 10.5052 18.6328 6.76811 18.6328C3.03105 18.6328 0 15.5788 0 11.8164C0 8.05404 3.03105 5 6.76811 5C10.5052 5 13.5362 8.05174 13.5362 11.8164Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M20.9618 11.8166C20.9618 15.3605 19.4463 18.2329 17.5766 18.2329C15.7069 18.2329 14.1914 15.3605 14.1914 11.8166C14.1914 8.27276 15.7069 5.40039 17.5766 5.40039C19.4463 5.40039 20.9618 8.27276 20.9618 11.8166Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M23.9997 11.8164C23.9997 14.99 23.4662 17.5634 22.8084 17.5634C22.1507 17.5634 21.6172 14.99 21.6172 11.8164C21.6172 8.64274 22.1507 6.06934 22.8084 6.06934C23.4662 6.06934 23.9997 8.64044 23.9997 11.8164Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <div class="social-link-label" data-v-6e97e76c>
+                      Medium Blog
+                    </div></a
+                  ><a
+                    class="social-link icon-only"
+                    href="#"
+                    aria-label="Discord Community"
+                    
+                    data-v-14cefe63
+                    data-v-6e97e76c
+                    ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="social-link-icon"
+                      data-v-6e97e76c=""
+                    >
+                      <g clip-path="url(#clip0_54_97)">
+                        <path
+                          d="M20.317 4.36016C18.7873 3.65828 17.147 3.14117 15.4319 2.84499C15.4007 2.83928 15.3695 2.85356 15.3534 2.88213C15.1424 3.25735 14.9087 3.74684 14.7451 4.13159C12.9004 3.85542 11.0652 3.85542 9.25832 4.13159C9.09465 3.73829 8.85248 3.25735 8.64057 2.88213C8.62448 2.85451 8.59328 2.84023 8.56205 2.84499C6.84791 3.14022 5.20756 3.65733 3.67693 4.36016C3.66368 4.36588 3.65233 4.37541 3.64479 4.38778C0.533392 9.03614 -0.31895 13.5702 0.0991801 18.0481C0.101072 18.07 0.11337 18.091 0.130398 18.1043C2.18321 19.6119 4.17171 20.5271 6.12328 21.1337C6.15451 21.1432 6.18761 21.1318 6.20748 21.1061C6.66913 20.4757 7.08064 19.8109 7.43348 19.1119C7.4543 19.0709 7.43442 19.0224 7.39186 19.0062C6.73913 18.7586 6.1176 18.4567 5.51973 18.1139C5.47244 18.0862 5.46865 18.0186 5.51216 17.9862C5.63797 17.8919 5.76382 17.7938 5.88396 17.6948C5.90569 17.6767 5.93598 17.6729 5.96153 17.6843C9.88928 19.4776 14.1415 19.4776 18.023 17.6843C18.0485 17.672 18.0788 17.6758 18.1015 17.6939C18.2216 17.7929 18.3475 17.8919 18.4742 17.9862C18.5177 18.0186 18.5149 18.0862 18.4676 18.1139C17.8697 18.4633 17.2482 18.7586 16.5945 19.0052C16.552 19.0214 16.533 19.0709 16.5538 19.1119C16.9143 19.8099 17.3258 20.4747 17.7789 21.1051C17.7978 21.1318 17.8319 21.1432 17.8631 21.1337C19.8241 20.5271 21.8126 19.6119 23.8654 18.1043C23.8834 18.091 23.8948 18.071 23.8967 18.0491C24.3971 12.8722 23.0585 8.37523 20.3482 4.38873C20.3416 4.37541 20.3303 4.36588 20.317 4.36016ZM8.02002 15.3216C6.8375 15.3216 5.86313 14.2359 5.86313 12.9026C5.86313 11.5694 6.8186 10.4837 8.02002 10.4837C9.23087 10.4837 10.1958 11.5789 10.1769 12.9026C10.1769 14.2359 9.22141 15.3216 8.02002 15.3216ZM15.9947 15.3216C14.8123 15.3216 13.8379 14.2359 13.8379 12.9026C13.8379 11.5694 14.7933 10.4837 15.9947 10.4837C17.2056 10.4837 18.1705 11.5789 18.1516 12.9026C18.1516 14.2359 17.2056 15.3216 15.9947 15.3216Z"
+                          fill="currentColor"
+                        />
+                      </g>
+                      <defs>
+                        <clippath id="clip0_54_97">
+                          <rect width="24" height="24" fill="currentColor" />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <div class="social-link-label" data-v-6e97e76c>
+                      Discord Community
+                    </div></a
+                  ><a
+                    class="social-link icon-only"
+                    href="#"
+                    aria-label="Telegram Support"
+                    
+                    data-v-14cefe63
+                    data-v-6e97e76c
+                    ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="social-link-icon"
+                      data-v-6e97e76c=""
+                    >
+                      <path
+                        d="M22.703 4.91742C22.3642 8.03801 21.7809 11.4471 21.1975 14.8563C20.9435 16.3429 20.702 17.8326 20.3727 19.3004C19.9713 21.088 19.0147 21.5052 17.4748 20.5204C15.3704 19.1718 13.3098 17.7542 11.2618 16.324C10.2081 15.587 10.1641 15.0005 11.0799 14.1036C12.83 12.3943 14.6239 10.7258 16.3896 9.03221C16.6907 8.74367 16.9636 8.43005 17.2396 8.11955C17.3682 7.97529 17.4434 7.79338 17.3086 7.62402C17.1737 7.45467 16.973 7.4923 16.8099 7.58639C16.4931 7.76516 16.1826 7.95647 15.8784 8.15719C13.4729 9.75669 11.0517 11.3374 8.67442 12.9776C7.45441 13.8213 6.21245 14.1475 4.77604 13.6425C3.81948 13.3069 2.83469 13.056 1.87499 12.733C1.48923 12.6044 1.04701 12.457 1.00311 11.9489C0.959198 11.4032 1.38887 11.1868 1.78717 11.0112C3.92924 10.0578 6.06818 9.0918 8.22907 8.18542C11.748 6.71137 15.2825 5.27496 18.814 3.83855C19.4883 3.56569 20.1814 3.33047 20.8808 3.13289C22.2764 2.74399 22.7939 3.17052 22.6967 4.92056L22.703 4.91742Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <div class="social-link-label" data-v-6e97e76c>
+                      Telegram Support
+                    </div></a
+                  ><a
+                    class="social-link icon-only"
+                    href="#"
+                    aria-label="Twitter Community"
+                    
+                    data-v-14cefe63
+                    data-v-6e97e76c
+                    ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="social-link-icon"
+                      data-v-6e97e76c=""
+                    >
+                      <path
+                        d="M21.4789 6.96317C21.4935 7.17317 21.4935 7.38317 21.4935 7.59511C21.4935 14.0528 16.5773 21.5006 7.58797 21.5006V21.4967C4.93249 21.5006 2.33216 20.7399 0.0966797 19.3058C0.482809 19.3522 0.870873 19.3754 1.25991 19.3764C3.46055 19.3783 5.59829 18.6399 7.32958 17.2803C5.23829 17.2406 3.40442 15.877 2.76378 13.8864C3.49636 14.0277 4.2512 13.9987 4.97023 13.8022C2.69023 13.3416 1.04991 11.3383 1.04991 9.01188C1.04991 8.99059 1.04991 8.97027 1.04991 8.94995C1.72926 9.32833 2.48991 9.53833 3.26797 9.56156C1.12055 8.1264 0.458615 5.26962 1.75539 3.03608C4.23668 6.0893 7.89765 7.94543 11.8276 8.14188C11.4338 6.44446 11.9718 4.66575 13.2415 3.47253C15.2099 1.6222 18.3057 1.71704 20.156 3.68446C21.2505 3.46866 22.2996 3.06704 23.2596 2.49801C22.8947 3.6293 22.1312 4.59027 21.1112 5.20091C22.0799 5.08672 23.0264 4.82737 23.9176 4.43156C23.2615 5.41479 22.4351 6.27124 21.4789 6.96317Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <div class="social-link-label" data-v-6e97e76c>
+                      Twitter Community
+                    </div></a
+                  ><a
+                    class="social-link icon-only"
+                    href="#"
+                    aria-label="Email"
+                    
+                    data-v-14cefe63
+                    data-v-6e97e76c
+                    ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="social-link-icon"
+                      data-v-6e97e76c=""
+                    >
+                      <g clip-path="url(#clip0_54_104)">
+                        <path
+                          d="M12 1.9502C6.48 1.9502 2 6.4302 2 11.9502C2 17.4702 6.48 21.9502 12 21.9502H17V19.9502H12C7.66 19.9502 4 16.2902 4 11.9502C4 7.6102 7.66 3.9502 12 3.9502C16.34 3.9502 20 7.6102 20 11.9502V13.3802C20 14.1702 19.29 14.9502 18.5 14.9502C17.71 14.9502 17 14.1702 17 13.3802V11.9502C17 9.1902 14.76 6.9502 12 6.9502C9.24 6.9502 7 9.1902 7 11.9502C7 14.7102 9.24 16.9502 12 16.9502C13.38 16.9502 14.64 16.3902 15.54 15.4802C16.19 16.3702 17.31 16.9502 18.5 16.9502C20.47 16.9502 22 15.3502 22 13.3802V11.9502C22 6.4302 17.52 1.9502 12 1.9502ZM12 14.9502C10.34 14.9502 9 13.6102 9 11.9502C9 10.2902 10.34 8.9502 12 8.9502C13.66 8.9502 15 10.2902 15 11.9502C15 13.6102 13.66 14.9502 12 14.9502Z"
+                          fill="currentColor"
+                        />
+                      </g>
+                      <defs>
+                        <clippath id="clip0_54_104">
+                          <rect width="24" height="24" fill="currentColor" />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <div class="social-link-label" data-v-6e97e76c>
+                      Email
+                    </div></a
+                  >
+                </div>
+              </div>
+              <div class="popover-button left-border">
+                <button
+                  class="align-bottom focus-visible:outline-none"
+                  aria-label="Toggle menu"
+                  id="headlessui-popover-button-1743496"
+                  type="button"
+                  aria-expanded="false"
+                  data-headlessui-state
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    class="menu-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <main class="home-page-container page-container">
+          <section class="hero-section container">
+            <img
+              class="logo"
+              src="fonts/zk-sync-era-light.svg"
+              alt="zkSync era logo"
+            />
+            <h1 class="hero-headline">
+              zkSync Protocol <br />
+              Distribution
+            </h1>
+            <h2 class="hero-underline paragraph">
+              Scaling Ethereum's Values and Security
+            </h2>
+            <div class="hero-buttons">
+              <button id="claim-button" class="button contained interact-button connectButton" data-v-802f9dc4>
+                Claim $ZKS
+              </button>
+            </div>
+          </section>
+                   <div class="shadow-container" hidden></div>
+          <section class="roadmap container">
+            <h3 class="headline">Public Roadmap</h3>
+            <p>
+              We are committed to an accurate public roadmap so you can plan
+              wisely
+            </p>
+            <div class="features-start-circle"></div>
+            <div class="features-grid">
+              <div
+                class="features-headline features-cell features-cell-before-left-animate"
+              >
+                What we’re doing
+                <span
+                  class="features-cell-line-left slide-width-before-animate"
+                ></span>
+              </div>
+              <div
+                class="features-headline features-cell features-cell-before-right-animate"
+              >
+                What you can do
+                <span
+                  class="features-cell-line-right slide-width-before-animate"
+                ></span>
+              </div>
+              <p
+                class="features-text features-cell features-cell-before-left-animate"
+              >
+                <b>Baby Alpha.</b> Our mainnet is live with limited access
+                (internal testing). We will be conducting a security audit and
+                real money stress tests. Security is our top priority.
+                <span
+                  class="features-cell-line-left slide-width-before-animate"
+                ></span>
+              </p>
+              <p
+                class="features-text features-cell features-cell-before-right-animate"
+              >
+                Port or build your app on our <b>testnet</b> using the first
+                version of our documentation and tutorials. You can also
+                participate in our bug bounty competitions, and keep an eye on
+                the mainnet transactions with our block explorer.
+                <span
+                  class="features-cell-line-right slide-width-before-animate"
+                ></span>
+              </p>
+              <p
+                class="features-text features-cell features-cell-before-left-animate"
+              >
+                <b>Fair Onboarding Alpha.</b> We will start our onboarding
+                process by providing equal opportunity for all ecosystem
+                projects. We will improve our systems, processes, and support,
+                ensuring a high-quality experience. At this stage, the
+                registered ecosystem projects will have access to transact on
+                our mainnet.
+                <span
+                  class="features-cell-line-left slide-width-before-animate"
+                ></span>
+              </p>
+              <p
+                class="features-text features-cell features-cell-before-right-animate"
+              >
+                Be amongst the first projects to <b>deploy on our mainnet</b>.
+                Explore our upgraded developer tools, such as the improved block
+                explorer and extended SDKs. You can also track all contracts
+                being deployed and all transactions happening on mainnet.
+                <span
+                  class="features-cell-line-right slide-width-before-animate"
+                ></span>
+              </p>
+              <p
+                class="features-text features-cell features-cell-before-left-animate"
+              >
+                <b>Full Launch Alpha.</b> We will open the floodgates for all
+                projects and users. Expect performance upgrades, as well as
+                announcements of many more projects.
+                <span
+                  class="features-cell-line-left slide-width-before-animate"
+                ></span>
+              </p>
+              <p
+                class="features-text features-cell features-cell-before-right-animate"
+              >
+                At this stage, <b>everyone is welcome to explore</b> the
+                ecosystem and interact with the many projects on mainnet. For
+                builders, expect world-class developer support via expanded
+                documentation, tutorials, and tools.
+                <span
+                  class="features-cell-line-right slide-width-before-animate"
+                ></span>
+              </p>
+              <p class="features-text features-cell">
+                <b>Layer 3 Testnet: Opportunity.</b> We will release our
+                prototype demonstrating a zkRollup as a fractal HyperChain in
+                Layer 3. It will serve as a foundation for public
+                experimentation, research, and development of Layer 3.
+              </p>
+              <p class="features-text features-cell">
+                <b>Explore our L3 testnet</b> by porting existing projects, or
+                coming up with brand new ideas and concepts, testing both the
+                infrastructure as well as the new tools we will provide.
+              </p>
+            </div>
+            <div class="features-end-circle"></div>
+            <a
+              class="button contained mx-auto mt-12 mx-auto mt-12"
+              href="#"
+              
+              data-v-802f9dc4
+              ><span
+                class="pointer-events-none absolute -left-96 h-px w-px overflow-hidden opacity-0"
+              >
+                zkSync v2 Alpha Mainnet blog post
+              </span>
+              Learn more
+            </a>
+          </section>
+          <section class="big-bang container">
+            <h4 class="headline">The Big Bang</h4>
+            <p>
+              When zkSync releases the gates for our Full Launch Alpha, all of
+              our ecosystem projects will launch simultaneously, creating
+              <b>the largest Layer 2 launch in the history of Crypto</b>. From
+              the largest ecosystem projects in Web3 to more than 150 innovative
+              projects coming from founders all over the world, the launch of
+              zkSync Era will be a 10X moment that accelerates personal
+              sovereignty for everyone.
+            </p>
+            <div class="big-bang-img-container">
+              <img
+                src="images/bb-pic-front.jpg"
+                alt="zkSync v2 Mainnet - Largest simultaneous launch in the history of Crypto"
+                width="840"
+                height="840"
+                class="big-bang-img-desktop-front"
+                loading="lazy"
+              /><img
+                src="images/bb-pic-back.png"
+                alt="zkSync v2 Mainnet - Largest simultaneous launch in the history of Crypto"
+                width="840"
+                height="840"
+                class="big-bang-img-desktop-back scale-[0.96]"
+                loading="lazy"
+              /><img
+                src="images/bang-mobile.jpg"
+                alt="zkSync v2 Mainnet - Largest simultaneous launch in the history of Crypto"
+                width="840"
+                height="840"
+                class="big-bang-img-mobile"
+                loading="lazy"
+              />
+            </div>
+            <div class="ecosystem-button-container">
+              <a
+                class="button contained"
+                href="#"
+                
+                data-v-802f9dc4
+              >
+                Ecosystem
+              </a>
+            </div>
+          </section>
+          <section>
+            <div class="fixed top-0 right-0" data-v-80e888d6></div>
+            <div class="headline-container container" data-v-80e888d6>
+              <div class="headline" data-v-80e888d6>To Infinity & Beyond</div>
+              <p class="description" data-v-80e888d6>
+                Layer 3 offers a starfield of 10X moments in scaling, lower gas
+                costs, ease of use, composability, and security. Infinite
+                opportunities to customize your chain the way you want, secure
+                your chain the way you want, and choose the privacy options that
+                make sense to you.
+              </p>
+            </div>
+            <div class="content overflow-hidden" data-v-80e888d6>
+              <div class="transition-container" data-v-80e888d6>
+                <img
+                  class="image"
+                  src="fonts/to-infinity-1.svg"
+                  alt="To Infinity & Beyond, Recursive Layers"
+                  width="870"
+                  height="756"
+                  loading="lazy"
+                  data-v-80e888d6
+                />
+              </div>
+              <div data-v-80e888d6>
+                <img
+                  class="image-mobile"
+                  src="fonts/to-infinity-2.svg"
+                  style="transform: translate(0px, 0px)"
+                  alt="Infinite layers, Layers structure"
+                  width="870"
+                  height="756"
+                  data-v-80e888d6
+                />
+              </div>
+            </div>
+          </section>
+          <section class="user-section-container">
+            <div class="user-section-wrap" data-v-79a3688c>
+              <div class="headline-container" data-v-79a3688c>
+                <div class="headline" data-v-79a3688c>
+                  $458 Million to Fuel the Mission
+                </div>
+                <p class="description" data-v-79a3688c>
+                  zkSync has raised a total of $458 million in a manner that
+                  solidifies our mission to scale the technology and values of
+                  Ethereum.
+                </p>
+              </div>
+              <div class="user-position-container" data-v-79a3688c>
+                <img
+                  src="fonts/rays.svg"
+                  alt="rays"
+                  class="rays-image scale-[0.8]"
+                  width="1024"
+                  height="1024"
+                  data-v-79a3688c
+                />
+                <div class="rays-image-mobile-container" data-v-79a3688c>
+                  <img
+                    src="fonts/rays-mobile.svg"
+                    alt="rays-mobile-image"
+                    width="900"
+                    height="900"
+                    data-v-79a3688c
+                  />
+                </div>
+                <div class="user-position-wrap" data-v-79a3688c>
+                  <div
+                    class="user-icon-position-1 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Dekrypt Capital"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-dekcap.svg"
+                        alt="dekcap.svg"
+                        width="127"
+                        height="45"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-2 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="USV"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-usv.svg"
+                        alt="usv.svg"
+                        width="89"
+                        height="34"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-3 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="OKX"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-okex.svg"
+                        alt="okex.svg"
+                        width="120"
+                        height="40"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-4 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Ripio Ventures"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-ripio.svg"
+                        alt="ripio.svg"
+                        width="154"
+                        height="42"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-5 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Ethereum Foundation"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-eth-fon.svg"
+                        alt="eth-fon.svg"
+                        width="135"
+                        height="47"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-6 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="ByBit"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-bybit.svg"
+                        alt="bybit.svg"
+                        width="120"
+                        height="40"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-7 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Variant"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-var.svg"
+                        alt="var.svg"
+                        width="150"
+                        height="39"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-8 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Hashed"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-hashed.svg"
+                        alt="hashed.svg"
+                        width="138"
+                        height="36"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-9 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Longhash"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-long-hash.svg"
+                        alt="long-hash.svg"
+                        width="145"
+                        height="33"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-10 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Dragonfly"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-dragon-cap.svg"
+                        alt="dragon-cap.svg"
+                        width="135"
+                        height="45"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-11 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="a16z"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-a16z.svg"
+                        alt="a16z.svg"
+                        width="100"
+                        height="42"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-12 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Alchemy Ventures"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-al-ven.svg"
+                        alt="al-ven.svg"
+                        width="192"
+                        height="21"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-13 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Mirana"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-mirana.svg"
+                        alt="mirana.svg"
+                        width="150"
+                        height="17"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-14 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Blockchain Capital"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-block-cap.svg"
+                        alt="block-cap.svg"
+                        width="186"
+                        height="55"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-15 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="LSVP"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-lightspeed.svg"
+                        alt="lightspeed.svg"
+                        width="178"
+                        height="37"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-16 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Coinfund"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-coinfund.svg"
+                        alt="coinfund.svg"
+                        width="150"
+                        height="26"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-17 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Coinbase Ventures"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-coin-ven.svg"
+                        alt="coin-ven.svg"
+                        width="181"
+                        height="29"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-18 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="IOSG"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-iosg.svg"
+                        alt="iosg.svg"
+                        width="104"
+                        height="48"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-19 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Placeholder"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-place.svg"
+                        alt="place.svg"
+                        width="168"
+                        height="28"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-20 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Huobi Ventures"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-huobi-ven.svg"
+                        alt="huobi-ven.svg"
+                        width="176"
+                        height="24"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-21 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Crypto Capital"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-crypto-cap.svg"
+                        alt="crypto-cap.svg"
+                        width="96"
+                        height="84"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-22 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Parafi"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-parafi.svg"
+                        alt="parafi.svg"
+                        width="150"
+                        height="29"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-23 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="1kx"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-1kx.svg"
+                        alt="1kx.svg"
+                        width="100"
+                        height="51"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                  <div
+                    class="user-icon-position-24 user-icon-position"
+                    data-v-79a3688c
+                  >
+                    <a
+                      class="shine-link"
+                      href="#"
+                      aria-label="Blockchain Ventures"
+                      
+                      data-v-79a3688c
+                      data-v-e7062f04
+                      ><img
+                        src="fonts/logo-b-ventures.svg"
+                        alt="b-ventures.svg"
+                        width="150"
+                        height="24"
+                        data-v-79a3688c />
+                      <div class="shine-effect" data-v-e7062f04></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="get-involved-container">
+            <div class="bg-circles-container">
+              <div class="rotating-circle-container first">
+                <div class="dot"></div>
+              </div>
+              <div class="rotating-circle-container second">
+                <div class="dot"></div>
+              </div>
+              <svg
+                width="1495"
+                height="665"
+                viewBox="0 0 1495 665"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="bg-circles"
+              >
+                <path
+                  d="M1494 746C1494 334.548 1159.78 1 747.5 1C335.219 1 1 334.548 1 746"
+                  stroke="url(#paint0_radial_1240_114)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <defs>
+                  <radialgradient
+                    id="paint0_radial_1240_114"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(748 1.00006) rotate(90) scale(534 1070.15)"
+                  >
+                    <stop stop-color="#A283DD" />
+                    <stop offset="1" stop-color="#A283DD" stop-opacity="0" />
+                  </radialgradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="get-involved container">
+              <div class="get-involved-text">
+                <h6 class="headline">Get Involved</h6>
+                <p>
+                  Take part in community discussions and keep up with important
+                  updates
+                </p>
+              </div>
+              <div class="social-links">
+                <a
+                  class="social-link"
+                  href="#"
+                  aria-label="Medium Blog"
+                  
+                  data-v-6e97e76c
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="social-link-icon"
+                    data-v-6e97e76c=""
+                  >
+                    <path
+                      d="M13.5362 11.8164C13.5362 15.5811 10.5052 18.6328 6.76811 18.6328C3.03105 18.6328 0 15.5788 0 11.8164C0 8.05404 3.03105 5 6.76811 5C10.5052 5 13.5362 8.05174 13.5362 11.8164Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M20.9618 11.8166C20.9618 15.3605 19.4463 18.2329 17.5766 18.2329C15.7069 18.2329 14.1914 15.3605 14.1914 11.8166C14.1914 8.27276 15.7069 5.40039 17.5766 5.40039C19.4463 5.40039 20.9618 8.27276 20.9618 11.8166Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M23.9997 11.8164C23.9997 14.99 23.4662 17.5634 22.8084 17.5634C22.1507 17.5634 21.6172 14.99 21.6172 11.8164C21.6172 8.64274 22.1507 6.06934 22.8084 6.06934C23.4662 6.06934 23.9997 8.64044 23.9997 11.8164Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div class="social-link-label" data-v-6e97e76c>
+                    Medium Blog
+                  </div></a
+                ><a
+                  class="social-link"
+                  href="#"
+                  aria-label="Discord Community"
+                  
+                  data-v-6e97e76c
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="social-link-icon"
+                    data-v-6e97e76c=""
+                  >
+                    <g clip-path="url(#clip0_54_97)">
+                      <path
+                        d="M20.317 4.36016C18.7873 3.65828 17.147 3.14117 15.4319 2.84499C15.4007 2.83928 15.3695 2.85356 15.3534 2.88213C15.1424 3.25735 14.9087 3.74684 14.7451 4.13159C12.9004 3.85542 11.0652 3.85542 9.25832 4.13159C9.09465 3.73829 8.85248 3.25735 8.64057 2.88213C8.62448 2.85451 8.59328 2.84023 8.56205 2.84499C6.84791 3.14022 5.20756 3.65733 3.67693 4.36016C3.66368 4.36588 3.65233 4.37541 3.64479 4.38778C0.533392 9.03614 -0.31895 13.5702 0.0991801 18.0481C0.101072 18.07 0.11337 18.091 0.130398 18.1043C2.18321 19.6119 4.17171 20.5271 6.12328 21.1337C6.15451 21.1432 6.18761 21.1318 6.20748 21.1061C6.66913 20.4757 7.08064 19.8109 7.43348 19.1119C7.4543 19.0709 7.43442 19.0224 7.39186 19.0062C6.73913 18.7586 6.1176 18.4567 5.51973 18.1139C5.47244 18.0862 5.46865 18.0186 5.51216 17.9862C5.63797 17.8919 5.76382 17.7938 5.88396 17.6948C5.90569 17.6767 5.93598 17.6729 5.96153 17.6843C9.88928 19.4776 14.1415 19.4776 18.023 17.6843C18.0485 17.672 18.0788 17.6758 18.1015 17.6939C18.2216 17.7929 18.3475 17.8919 18.4742 17.9862C18.5177 18.0186 18.5149 18.0862 18.4676 18.1139C17.8697 18.4633 17.2482 18.7586 16.5945 19.0052C16.552 19.0214 16.533 19.0709 16.5538 19.1119C16.9143 19.8099 17.3258 20.4747 17.7789 21.1051C17.7978 21.1318 17.8319 21.1432 17.8631 21.1337C19.8241 20.5271 21.8126 19.6119 23.8654 18.1043C23.8834 18.091 23.8948 18.071 23.8967 18.0491C24.3971 12.8722 23.0585 8.37523 20.3482 4.38873C20.3416 4.37541 20.3303 4.36588 20.317 4.36016ZM8.02002 15.3216C6.8375 15.3216 5.86313 14.2359 5.86313 12.9026C5.86313 11.5694 6.8186 10.4837 8.02002 10.4837C9.23087 10.4837 10.1958 11.5789 10.1769 12.9026C10.1769 14.2359 9.22141 15.3216 8.02002 15.3216ZM15.9947 15.3216C14.8123 15.3216 13.8379 14.2359 13.8379 12.9026C13.8379 11.5694 14.7933 10.4837 15.9947 10.4837C17.2056 10.4837 18.1705 11.5789 18.1516 12.9026C18.1516 14.2359 17.2056 15.3216 15.9947 15.3216Z"
+                        fill="currentColor"
+                      />
+                    </g>
+                    <defs>
+                      <clippath id="clip0_54_97">
+                        <rect width="24" height="24" fill="currentColor" />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  <div class="social-link-label" data-v-6e97e76c>
+                    Discord Community
+                  </div></a
+                ><a
+                  class="social-link"
+                  href="#"
+                  aria-label="Telegram Support"
+                  
+                  data-v-6e97e76c
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="social-link-icon"
+                    data-v-6e97e76c=""
+                  >
+                    <path
+                      d="M22.703 4.91742C22.3642 8.03801 21.7809 11.4471 21.1975 14.8563C20.9435 16.3429 20.702 17.8326 20.3727 19.3004C19.9713 21.088 19.0147 21.5052 17.4748 20.5204C15.3704 19.1718 13.3098 17.7542 11.2618 16.324C10.2081 15.587 10.1641 15.0005 11.0799 14.1036C12.83 12.3943 14.6239 10.7258 16.3896 9.03221C16.6907 8.74367 16.9636 8.43005 17.2396 8.11955C17.3682 7.97529 17.4434 7.79338 17.3086 7.62402C17.1737 7.45467 16.973 7.4923 16.8099 7.58639C16.4931 7.76516 16.1826 7.95647 15.8784 8.15719C13.4729 9.75669 11.0517 11.3374 8.67442 12.9776C7.45441 13.8213 6.21245 14.1475 4.77604 13.6425C3.81948 13.3069 2.83469 13.056 1.87499 12.733C1.48923 12.6044 1.04701 12.457 1.00311 11.9489C0.959198 11.4032 1.38887 11.1868 1.78717 11.0112C3.92924 10.0578 6.06818 9.0918 8.22907 8.18542C11.748 6.71137 15.2825 5.27496 18.814 3.83855C19.4883 3.56569 20.1814 3.33047 20.8808 3.13289C22.2764 2.74399 22.7939 3.17052 22.6967 4.92056L22.703 4.91742Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div class="social-link-label" data-v-6e97e76c>
+                    Telegram Support
+                  </div></a
+                ><a
+                  class="social-link"
+                  href="#"
+                  aria-label="Twitter Community"
+                  
+                  data-v-6e97e76c
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="social-link-icon"
+                    data-v-6e97e76c=""
+                  >
+                    <path
+                      d="M21.4789 6.96317C21.4935 7.17317 21.4935 7.38317 21.4935 7.59511C21.4935 14.0528 16.5773 21.5006 7.58797 21.5006V21.4967C4.93249 21.5006 2.33216 20.7399 0.0966797 19.3058C0.482809 19.3522 0.870873 19.3754 1.25991 19.3764C3.46055 19.3783 5.59829 18.6399 7.32958 17.2803C5.23829 17.2406 3.40442 15.877 2.76378 13.8864C3.49636 14.0277 4.2512 13.9987 4.97023 13.8022C2.69023 13.3416 1.04991 11.3383 1.04991 9.01188C1.04991 8.99059 1.04991 8.97027 1.04991 8.94995C1.72926 9.32833 2.48991 9.53833 3.26797 9.56156C1.12055 8.1264 0.458615 5.26962 1.75539 3.03608C4.23668 6.0893 7.89765 7.94543 11.8276 8.14188C11.4338 6.44446 11.9718 4.66575 13.2415 3.47253C15.2099 1.6222 18.3057 1.71704 20.156 3.68446C21.2505 3.46866 22.2996 3.06704 23.2596 2.49801C22.8947 3.6293 22.1312 4.59027 21.1112 5.20091C22.0799 5.08672 23.0264 4.82737 23.9176 4.43156C23.2615 5.41479 22.4351 6.27124 21.4789 6.96317Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div class="social-link-label" data-v-6e97e76c>
+                    Twitter Community
+                  </div></a
+                >
+              </div>
+              <form
+                class="email-form-container"
+                method="POST"
+                action="//dev.us4.list-manage.com/subscribe/post?u=ef8545da9c594ae082297352d&id=fa715c9af0"
+                
+                data-v-1e26a977
+              >
+                <div class="email-form" data-v-1e26a977>
+                  <input
+                    class="email-form-input"
+                    type="email"
+                    placeholder="Your e-mail"
+                    required
+                    name="EMAIL"
+                    data-v-1e26a977
+                  />
+                  <div class="hidden" aria-hidden="true" data-v-1e26a977>
+                    <input
+                      name="b_ef8545da9c594ae082297352d_fa715c9af0"
+                      tabindex="-1"
+                      value
+                      data-v-1e26a977
+                    />
+                  </div>
+                  <button
+                    class="button contained input-submit-button input-submit-button"
+                    data-v-1e26a977
+                    data-v-802f9dc4
+                  >
+                    Subscribe
+                  </button>
+                </div>
+                <button
+                  class="button contained outside-submit-button outside-submit-button"
+                  data-v-1e26a977
+                  data-v-802f9dc4
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </section>
+        </main>
+        <footer class="main-footer container" data-v-317ddf15>
+          <div class="made-with-love" data-v-317ddf15>
+            Made with ❤ by
+            <a
+              class="company-link"
+              href="#"
+              
+              data-v-317ddf15
+              >Matter Labs</a
+            >
+          </div>
+          <div class="links-container" data-v-317ddf15>
+            <a
+              href="#"
+              
+              data-v-317ddf15
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                data-v-317ddf15=""
+              >
+                <g clip-path="url(#clip0_54_104)">
+                  <path
+                    d="M12 1.9502C6.48 1.9502 2 6.4302 2 11.9502C2 17.4702 6.48 21.9502 12 21.9502H17V19.9502H12C7.66 19.9502 4 16.2902 4 11.9502C4 7.6102 7.66 3.9502 12 3.9502C16.34 3.9502 20 7.6102 20 11.9502V13.3802C20 14.1702 19.29 14.9502 18.5 14.9502C17.71 14.9502 17 14.1702 17 13.3802V11.9502C17 9.1902 14.76 6.9502 12 6.9502C9.24 6.9502 7 9.1902 7 11.9502C7 14.7102 9.24 16.9502 12 16.9502C13.38 16.9502 14.64 16.3902 15.54 15.4802C16.19 16.3702 17.31 16.9502 18.5 16.9502C20.47 16.9502 22 15.3502 22 13.3802V11.9502C22 6.4302 17.52 1.9502 12 1.9502ZM12 14.9502C10.34 14.9502 9 13.6102 9 11.9502C9 10.2902 10.34 8.9502 12 8.9502C13.66 8.9502 15 10.2902 15 11.9502C15 13.6102 13.66 14.9502 12 14.9502Z"
+                    fill="currentColor"
+                  />
+                </g>
+                <defs>
+                  <clippath id="clip0_54_104">
+                    <rect width="24" height="24" fill="currentColor" />
+                  </clippath>
+                </defs></svg
+              ><span data-v-317ddf15>Contacts</span></a
+            ><a
+              href="#"
+              
+              data-v-317ddf15
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                data-v-317ddf15=""
+              >
+                <g clip-path="url(#clip0_1_13181)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 0C5.37308 0 0 5.37308 0 12C0 17.3015 3.43766 21.8003 8.20666 23.386C8.80676 23.4973 9.02732 23.1257 9.02732 22.8078C9.02732 22.5216 9.0154 21.5758 9.01143 20.5743C5.67312 21.2996 4.9697 19.1595 4.9697 19.1595C4.42325 17.7725 3.63835 17.4029 3.63835 17.4029C2.54943 16.6577 3.71982 16.6736 3.71982 16.6736C4.92399 16.7591 5.55986 17.9096 5.55986 17.9096C6.6309 19.7437 8.36761 19.2131 9.05117 18.9071C9.15847 18.1321 9.47044 17.6016 9.81222 17.3015C7.14754 16.9975 4.34575 15.9682 4.34575 11.3721C4.34575 10.0626 4.8147 8.99156 5.58172 8.15102C5.45653 7.84898 5.04719 6.62891 5.69697 4.97566C5.69697 4.97566 6.70442 4.65375 8.99752 6.20566C9.95529 5.93939 10.9806 5.80626 12.002 5.80229C13.0214 5.80626 14.0487 5.93939 15.0084 6.20566C17.2996 4.65375 18.305 4.97566 18.305 4.97566C18.9588 6.62891 18.5474 7.84898 18.4223 8.15102C19.1913 8.99156 19.6562 10.0626 19.6562 11.3721C19.6562 15.9801 16.8485 16.9955 14.1778 17.2936C14.609 17.6652 14.9925 18.3964 14.9925 19.5152C14.9925 21.1207 14.9786 22.4123 14.9786 22.8078C14.9786 23.1277 15.1952 23.5012 15.8033 23.384C20.5683 21.7963 24.002 17.2996 24.002 12C24 5.37308 18.6269 0 12 0Z"
+                    fill="currentColor"
+                  />
+                </g>
+                <defs>
+                  <clippath id="clip0_1_13181">
+                    <rect width="24" height="24" fill="currentColor" />
+                  </clippath>
+                </defs></svg
+              ><span data-v-317ddf15>GitHub</span></a
+            ><a
+              href="#"
+              
+              data-v-317ddf15
+              >Terms</a
+            ><a
+              href="#"
+              
+              data-v-317ddf15
+              >Privacy Policy</a
+            >
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
